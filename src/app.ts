@@ -19,7 +19,7 @@ const redisClient = new Redis({
   host: REDIS_HOST,
 });
 
-if (process.env.NODE_ENV === 'development') app.use(corsMiddleware);
+app.use(corsMiddleware);
 
 app.use(morgan('dev'));
 app.use(
